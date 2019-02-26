@@ -15,8 +15,11 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/admin', 'Admin\HomeController@index')->name('admin.home')->middleware('auth');
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function(){
 
-Route::get('/admin/posts', 'Admin\PostController@index')->name('admin.posts.index')->middleware('auth');
+  Route::get('/', 'HomeController@index')->name('home');
+
+  Route::reosurce('/posts', 'PostController@index')->name('posts.index');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
