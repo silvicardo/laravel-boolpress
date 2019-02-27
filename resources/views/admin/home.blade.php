@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <p>You are logged in!</p>
+
+                    <a class="btn btn-primary" href="{{ route('admin.posts.create') }}">New Post</a>
                 </div>
             </div>
         </div>

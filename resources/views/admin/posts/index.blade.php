@@ -1,12 +1,13 @@
 @extends('layouts.admin_app')
 
-@section('title','All Posts');
+@section('title','All Posts')
 
 @section('content')
 
 <section  class="posts container py-5">
 
-  <h1 class="mb-5">All Posts</h1>
+
+    <h1 class="mb-5 d-inline">All Posts</h1>
 
   {{-- pagination-placeholder $posts->links() --}}
   <table class="table text-center mt-5">
@@ -28,7 +29,7 @@
                 <td>{{ $post->author }}</td>
                 <td>{{ str_limit($post->content, 10, '...') }}</td>
             <td>
-              <a class="btn btn-success" href="{{ route('admin.posts.show', $post}}">Detail</a>
+              <a class="btn btn-success" href="{{ route('admin.posts.show', $post) }}">Detail</a>
             </td>
             <td>
               <a class="btn btn-warning"href="{{ route('admin.posts.edit', $post)}}">Edit</a>
