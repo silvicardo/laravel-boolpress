@@ -24,16 +24,13 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-      if (!empty(Post::find($id))){
+
         $formData = $request->all();
          $newPost = new Post();
          $newPost->fill($formData);
          $newPost->save();
          return redirect()->route('admin.posts.index');
-
-      } else {
-        abort(404);
-      }
+         
     }
 
     public function show(Post $post)
