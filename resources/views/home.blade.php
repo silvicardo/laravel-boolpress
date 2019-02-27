@@ -6,10 +6,16 @@
 
         <title>Laravel</title>
 
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+        <!-- Page Styles -->
         <style>
             html, body {
                 background-color: #fff;
@@ -74,7 +80,7 @@
                     @auth
                         <a href="{{ route('admin.home') }}">Home</a>
                     @else
-                        <a href="{{ route('posts.index') }}">Home</a>
+                        <a href="{{ route('posts.index') }}">Blog</a>
                         <a href="{{ route('login') }}">Login</a>
 
 
@@ -91,6 +97,19 @@
                 </div>
 
                 <p>The ultimate blogging platform</p>
+
+                @if (!empty($lastPosts))
+
+                  <h1 class=" d-inline">Our latest Posts</h1>
+
+                {{-- pagination-placeholder $posts->links() --}}
+                    <div class="list-group my-5">
+                      @foreach ($lastPosts as $post)
+                          <a class="list-group-item list-group-item-action"  href="{{route('posts.show',$post->id)}}">{{ $post->title }}</a>
+                      @endforeach
+                    </div>
+                @endif
+
             </div>
         </div>
     </body>

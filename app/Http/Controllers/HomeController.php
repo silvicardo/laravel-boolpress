@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
   public function index()
   {
-      return view('home');
+      $lastPosts = Post::orderBy('id', 'desc')->take(5)->get();
+      return view('home', compact('lastPosts'));
   }
 }

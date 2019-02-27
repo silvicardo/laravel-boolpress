@@ -16,9 +16,6 @@
             <th>Title</th>
             <th>Author</th>
             <th>Content</th>
-            <th></th>
-            <th></th>
-            <th></th>
 
       </thead>
       <tbody>

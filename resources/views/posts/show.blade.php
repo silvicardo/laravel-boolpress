@@ -13,8 +13,8 @@
 
   <p>{{$post->content}}</p>
 
-  <a href="{{ url()->previous() }}" class="btn btn-info">Back</a>
-
+  <a href="{{ url()->previous() }}" class="btn btn-info mr-3">Back</a>
+  <a href="{{ route('posts.index') }}" class="btn btn-info">All Posts</a>
 </section>
 
 @endsection

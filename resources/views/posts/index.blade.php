@@ -17,9 +17,6 @@
             <th>Author</th>
             <th>Category</th>
             <th>Content</th>
-            <th></th>
-            <th></th>
-            <th></th>
 
       </thead>
       <tbody>
