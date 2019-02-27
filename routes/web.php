@@ -11,7 +11,24 @@
 |
 */
 
+//ROTTE PUBBLICHE
+
 Route::get('/', 'HomeController@index');
+
+Route::get('/categories/{slug}', 'CategoryController@postsPerCategory');
+Route::get('/categories/{slug}/{postid}', 'CategoryController@categoryPostAtId');
+Route::get('/home', 'HomeController@index')->name('home');
+
+//GLI URL "PUBBLICI" DI POSTS E CATEGORIES RIMANDANO ALLE ADMIN
+Route::middleware('auth')->namespace('Admin')->name('admin.')->group(function(){
+
+  Route::resource('/posts', 'PostController');
+
+  Route::resource('/categories', 'CategoryController');
+
+});
+
+//Rotte ADMIN
 
 Auth::routes();
 
@@ -24,5 +41,3 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
   Route::resource('/categories', 'CategoryController');
 
 });
-
-Route::get('/home', 'HomeController@index')->name('home');
