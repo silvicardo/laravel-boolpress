@@ -28,7 +28,7 @@
                 <td>{{ $post->author }}</td>
                 <td>{{ str_limit($post->content, 10, '...') }}</td>
             <td>
-              <a class="btn btn-success" href="{{ route('admin.posts.show', $post->id)}}">Detail</a>
+              <a class="btn btn-success" href="{{ route('admin.posts.show', $post}}">Detail</a>
             </td>
             <td>
               <a class="btn btn-warning"href="{{ route('admin.posts.edit', $post)}}">Edit</a>
