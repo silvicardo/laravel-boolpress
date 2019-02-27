@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('title','Show Post in Category');
+@section('title','Show Post in Category')
 
 @section('content')
 
