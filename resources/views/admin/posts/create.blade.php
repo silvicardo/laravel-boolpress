@@ -22,6 +22,14 @@
         <label>Content</label>
         <textarea class="form-control" name="content" rows="3" value=""></textarea>
       </div>
+      <div class="form-group">
+        <label for="category_id">Category</label>
+        <select name="category_id" class="form-control">
+          @foreach ($categories as $category)
+            <option value="{{$category->id}}">{{ $category->title }}</option>
+          @endforeach
+        </select>
+      </div>
 
       <button type="submit" class="btn btn-primary btn-lg btn-block">Submit your Post</button>
     </form>

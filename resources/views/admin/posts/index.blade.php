@@ -15,6 +15,7 @@
             <th>Id</th>
             <th>Title</th>
             <th>Author</th>
+            <th>Category</th>
             <th>Content</th>
             <th></th>
             <th></th>
@@ -27,6 +28,7 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->author }}</td>
+                <td>{{ $post->category->title }}</td>
                 <td>{{ str_limit($post->content, 10, '...') }}</td>
             <td>
               <a class="btn btn-success" href="{{ route('admin.posts.show', $post) }}">Detail</a>

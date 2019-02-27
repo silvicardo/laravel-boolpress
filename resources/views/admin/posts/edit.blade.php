@@ -19,6 +19,7 @@
         <label>Content</label>
         <textarea class="form-control" name="content" rows="3" value="{{ $post->content}}">{{ $post->content}}</textarea>
       </div>
+      {{-- Non aggiungo la modifica alla categoria perchè a quel punto avrebbe più senso per l'utente eliminare e fare un nuovo post --}}
       <button type="submit" class="btn btn-primary btn-lg btn-block">Submit your changes</button>
     </form>
 
