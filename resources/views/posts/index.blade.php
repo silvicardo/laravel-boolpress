@@ -26,7 +26,7 @@
                 <td><a href="{{route('posts.show',$post->id)}}">{{ $post->title }}</a></td>
                 <td>{{ $post->author }}</td>
                 <td>{{ $post->category->title }}</td>
-                <td>{{ str_limit($post->content, 10, '...') }}</td>
+                <td>{!! str_limit($post->content, 10, '...') !!}</td>
         @empty
           <h1>No posts</h1>
         @endforelse

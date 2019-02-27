@@ -24,7 +24,7 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->author }}</td>
-                <td>{{ str_limit($post->content, 10, '...') }}</td>
+                <td>{!! str_limit($post->content, 10, '...') !!}</td>
           </tr>
         @empty
           <h1>No posts in this category</h1>

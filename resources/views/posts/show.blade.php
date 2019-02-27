@@ -11,7 +11,7 @@
     <h5>Written by {{ $post->author }}</h3>
   </div>
 
-  <p>{{$post->content}}</p>
+  <p>{!! $post->content !!}</p>
 
   <a href="{{ url()->previous() }}" class="btn btn-info mr-3">Back</a>
   <a href="{{ route('posts.index') }}" class="btn btn-info">All Posts</a>

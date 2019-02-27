@@ -11,7 +11,7 @@
     <h5>Written by {{ $post->author }}</h3>
   </div>
 
-  <p>{{$post->content}}</p>
+  <p>{!! $post->content !!}</p>
 
   <div class="buttons mt-5">
       <a class="btn btn-warning mr-2"href="{{ route('admin.posts.edit', $post)}}">Edit</a>

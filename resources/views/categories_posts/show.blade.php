@@ -12,7 +12,7 @@
     <h6>Category: {{ $category->title }}</h6>
   </div>
 
-  <p>{{$post->content}}</p>
+  <p>{!! $post->content !!}</p>
 
   <a href="{{ url()->previous() }}" class="btn btn-info">Back</a>
 
