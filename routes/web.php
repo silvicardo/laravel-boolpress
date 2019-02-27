@@ -21,6 +21,8 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
 
   Route::resource('/posts', 'PostController');
 
+  Route::resource('/categories', 'CategoryController');
+
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

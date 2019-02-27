@@ -36,9 +36,15 @@
                       <li class="nav-item">
                           <a class="nav-link" href="{{ route('admin.posts.index') }}">POSTS</a>
                       </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('admin.categories.index') }}">CATEGORIES</a>
+                      </li>
                       @if (Auth::check())
-                        <li class="nav-item">
+                        <li class="nav-item mx-4">
                           <a class="btn btn-primary" href="{{ route('admin.posts.create') }}">New Post</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="btn btn-primary" href="{{ route('admin.categories.create') }}">New Category</a>
                         </li>
                       @endif
                     </ul>

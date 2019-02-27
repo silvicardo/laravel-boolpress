@@ -16,7 +16,8 @@
 
                     <p>You are logged in!</p>
 
-                    <a class="btn btn-primary" href="{{ route('admin.posts.create') }}">New Post</a>
+                    <a class="btn btn-primary mr-5" href="{{ route('admin.posts.create') }}">New Post</a>
+                    <a class="btn btn-primary" href="{{ route('admin.categories.create') }}">New Category</a>
                 </div>
             </div>
         </div>
