@@ -8,7 +8,7 @@
 
   <h1>Create New Post</h1>
 
-    <form method="POST" action="{{ route('admin.posts.store')}}">
+    <form class="my-5"  method="POST" action="{{ route('admin.posts.store')}}">
       @csrf
       <div class="form-group">
         <label>Author</label>
@@ -33,6 +33,8 @@
 
       <button type="submit" class="btn btn-primary btn-lg btn-block">Submit your Post</button>
     </form>
+
+    <a href="{{ url()->previous() }}" class="btn btn-info">Back</a>
 
 </section>
 

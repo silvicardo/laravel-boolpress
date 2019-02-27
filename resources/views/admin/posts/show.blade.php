@@ -20,6 +20,7 @@
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
+      <a href="{{ url()->previous() }}" class="btn btn-info ml-2">Back</a>
   </div>
 
 </section>

@@ -8,7 +8,7 @@
 
   <h1>Edit {{$post->title}}</h1>
 
-    <form method="POST" action="{{ route('admin.posts.update', $post)}}">
+    <form class="my-5"  method="POST" action="{{ route('admin.posts.update', $post)}}">
       @csrf
       @method('PUT')
       <div class="form-group">
@@ -22,6 +22,8 @@
       {{-- Non aggiungo la modifica alla categoria perchè a quel punto avrebbe più senso per l'utente eliminare e fare un nuovo post --}}
       <button type="submit" class="btn btn-primary btn-lg btn-block">Submit your changes</button>
     </form>
+
+    <a href="{{ url()->previous() }}" class="btn btn-info">Back</a>
 
 </section>
 

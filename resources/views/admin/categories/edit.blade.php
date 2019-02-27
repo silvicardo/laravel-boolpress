@@ -8,7 +8,7 @@
 
   <h1>Edit {{$category->title}}</h1>
 
-    <form method="POST" action="{{ route('admin.categories.update', $category)}}">
+    <form class="my-5" method="POST" action="{{ route('admin.categories.update', $category)}}">
       @csrf
       @method('PUT')
       <div class="form-group">
@@ -18,6 +18,7 @@
       {{-- lo slug analogamente al seeder viene curato in category controller a seguito dell'update --}}
       <button type="submit" class="btn btn-primary btn-lg btn-block">Submit your changes</button>
     </form>
+    <a href="{{ url()->previous() }}" class="btn btn-info">Back</a>
 
 </section>
 
